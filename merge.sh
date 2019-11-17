@@ -22,8 +22,9 @@ git fetch skeleton
 git merge --squash --allow-unrelated-histories skeleton/$mergeBranch
 git remote remove skeleton
 
-cd "$skeletonDir" && git branch -D $mergeBranch
+cd "$skeletonDir"
 git checkout master -f
 git reset --hard
+git branch -D $mergeBranch
 
 exit 0
