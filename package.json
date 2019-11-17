@@ -1,5 +1,5 @@
 {
-  "name": "watertracker",
+  "name": "ReactNativeSkeleton",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -32,6 +32,7 @@
     "@babel/core": "7.6.4",
     "@babel/runtime": "7.6.3",
     "@react-native-community/eslint-config": "^0.0.5",
+    "babel-plugin-module-resolver": "3.2.0",
     "@types/jest": "^24.0.18",
     "@types/react-native": "^0.60.22",
     "@types/react-test-renderer": "16.9.0",
