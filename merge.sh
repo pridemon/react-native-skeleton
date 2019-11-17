@@ -19,7 +19,7 @@ git commit -m "rename project"
 cd "$mergeDestination" || exit
 git remote add skeleton "$skeletonDir"
 git fetch skeleton
-git merge --squash --allow-unrelated-histories skeleton/$mergeBranch # or whichever branch you want to merge
+git merge --squash --allow-unrelated-histories skeleton/$mergeBranch
 git remote remove skeleton
 
 cd "$skeletonDir" && git branch -D $mergeBranch
