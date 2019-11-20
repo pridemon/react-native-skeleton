@@ -11,11 +11,22 @@
     "start:reset": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix --quiet",
     "clean:js": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && yarn cache clean && yarn install",
     "clean:android": "cd android && ./gradlew clean && ./gradlew cleanBuildCache",
     "clean:ios": "rm -rf ios/Pods/* && rm -rf ~/Library/Caches/CocoaPods/* && rm -rf ~/Library/Developer/Xcode/DerivedData/* && cd ios && pod cache clean --all && pod install",
     "postinstall": "yarn jetify"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx|.ts|.tsx)": [
+      "yarn lint:fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "moment": "^2.24.0",
@@ -32,14 +43,16 @@
     "@babel/core": "7.6.4",
     "@babel/runtime": "7.6.3",
     "@react-native-community/eslint-config": "^0.0.5",
-    "babel-plugin-module-resolver": "3.2.0",
     "@types/jest": "^24.0.18",
     "@types/react-native": "^0.60.22",
     "@types/react-test-renderer": "16.9.0",
     "babel-jest": "24.9.0",
+    "babel-plugin-module-resolver": "3.2.0",
     "eslint": "^5.16.0",
+    "husky": "^3.1.0",
     "jest": "24.9.0",
     "jetifier": "^1.6.2",
+    "lint-staged": "^9.4.3",
     "metro-react-native-babel-preset": "0.56.0",
     "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.9.0",
