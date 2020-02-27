@@ -10,11 +10,11 @@
     "start": "react-native start",
     "start:reset": "react-native start --reset-cache",
     "test": "jest",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix --quiet",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet",
     "clean:js": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && yarn cache clean && yarn install",
     "clean:android": "cd android && ./gradlew clean && ./gradlew cleanBuildCache",
-    "clean:ios": "rm -rf ios/Pods/* && rm -rf ~/Library/Caches/CocoaPods/* && rm -rf ~/Library/Developer/Xcode/DerivedData/* && cd ios && pod cache clean --all && pod install",
+    "clean:ios": "rm -rf ios/Pods/ && rm -rf ~/Library/Caches/CocoaPods/ && rm -rf ~/Library/Developer/Xcode/DerivedData/ && cd ios && pod cache clean --all && pod install",
     "postinstall": "yarn jetify"
   },
   "husky": {
@@ -31,7 +31,7 @@
   "dependencies": {
     "moment": "^2.24.0",
     "react": "16.9.0",
-    "react-native": "0.61.4",
+    "react-native": "0.61.5",
     "react-native-device-info": "^5.3.0",
     "react-native-iap": "^4.2.2",
     "react-native-libs": "git+https://4579b398f7615b2b10c27229441afc34a4bd42a8:x-oauth-basic@github.com/pridemon/react-native-libs#1.0.0",
