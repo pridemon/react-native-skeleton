@@ -11,9 +11,9 @@ git checkout -b $mergeBranch
 read -p 'Project name ' projectName
 read -p 'Android bundle identifier, e.g. com.wachanga.* ' androidBundle
 
-react-native-rename $projectName -b $androidBundle
+# react-native-rename $projectName -b $androidBundle
 
-git add .
+git add git diff 0.0.1 origin/test_branch
 git commit -m "rename project"
 
 cd "$mergeDestination" || exit
