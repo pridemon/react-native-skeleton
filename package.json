@@ -15,8 +15,10 @@
     "clean:js": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && yarn cache clean && yarn install",
     "clean:android": "cd android && ./gradlew clean && ./gradlew cleanBuildCache",
     "clean:ios": "rm -rf ios/Pods/ && rm -rf ~/Library/Caches/CocoaPods/ && rm -rf ~/Library/Developer/Xcode/DerivedData/ && cd ios && pod cache clean --all && pod install",
-    "postinstall": "yarn jetify"
+    "postinstall": "yarn jetify",
+    "merge:skeleton": "export LANG='en_US.UTF-8' && ts-node upgrade.ts"
   },
+  "skeleton": "0.0.1",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -43,6 +45,7 @@
     "@babel/core": "7.6.4",
     "@babel/runtime": "7.6.3",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/inquirer": "^6.5.0",
     "@types/jest": "^24.0.18",
     "@types/react-native": "^0.60.22",
     "@types/react-test-renderer": "16.9.0",
@@ -50,13 +53,18 @@
     "babel-plugin-module-resolver": "3.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-sonarjs": "^0.5.0",
+    "execa": "^4.0.0",
+    "fs": "^0.0.1-security",
     "husky": "^3.1.0",
+    "inquirer": "^7.1.0",
     "jest": "24.9.0",
     "jetifier": "^1.6.2",
     "lint-staged": "^9.4.3",
     "metro-react-native-babel-preset": "0.56.0",
+    "path": "^0.12.7",
     "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.9.0",
+    "ts-node": "^8.8.2",
     "typescript": "^3.6.3"
   },
   "jest": {
