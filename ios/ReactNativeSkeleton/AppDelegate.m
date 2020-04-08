@@ -26,6 +26,7 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
+  // test ios diff
   [self.window makeKeyAndVisible];
   return YES;
 }
