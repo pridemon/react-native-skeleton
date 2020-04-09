@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   const productionPlugins = api.env('production') ? [['transform-remove-console']] : [];
 
   return {
