@@ -11,6 +11,8 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import com.google.android.play.core.missingsplits.MissingSplitsManagerFactory;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -42,6 +44,9 @@ public class MainApplication extends Application implements ReactApplication {
 
   @Override
   public void onCreate() {
+    if (MissingSplitsManagerFactory.create(this).disableAppIfMissingRequiredSplits()) {
+      return;
+    }
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
