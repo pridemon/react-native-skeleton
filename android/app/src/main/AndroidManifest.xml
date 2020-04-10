@@ -27,6 +27,9 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <meta-data android:name="com.bugsnag.android.API_KEY" android:value="YOUR-API-KEY-HERE"/>
+      <meta-data android:name="com.bugsnag.android.DETECT_NDK_CRASHES" android:value="true"/>
+      <meta-data android:name="com.bugsnag.android.DETECT_ANRS" android:value="true"/>
     </application>
 
 </manifest>
