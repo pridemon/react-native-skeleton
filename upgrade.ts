@@ -131,7 +131,13 @@ async function upgrade(): Promise<void> {
     lastMergedSkeletonVersion = '0.0.1';
   }
 
-  const {stdout: lastSkeletonVersion} = await execa('git', ['describe', '--tags', '--abbrev=0']);
+  const {stdout: lastCommit} = await execa('git', ['rev-list', '--tags', '--max-count=1']);
+  const {stdout: lastSkeletonVersion} = await execa('git', [
+    'describe',
+    '--tags',
+    `${lastCommit}`,
+    '--abbrev=0',
+  ]);
 
   const patch = await getPatch(lastMergedSkeletonVersion, lastSkeletonVersion);
 
