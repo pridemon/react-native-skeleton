@@ -6,15 +6,16 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 28
         targetSdkVersion = 28
-        amplitudeLibVersion =  "2.23.2"
+        amplitudeLibVersion =  "2.24.2"
     }
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.4.2")
+        classpath("com.android.tools.build:gradle:3.5.3")
         classpath("com.android.tools.build:bundletool:0.10.3") // see https://developer.android.com/guide/app-bundle/sideload-check
+        classpath("com.bugsnag:bugsnag-android-gradle-plugin:4.+")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -35,6 +36,7 @@ allprojects {
 
         google()
         jcenter()
-        maven { url 'https://jitpack.io' }
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://maven.google.com' }
     }
 }
