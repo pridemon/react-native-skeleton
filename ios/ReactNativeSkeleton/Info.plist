@@ -4,6 +4,8 @@
 <dict>
   <key>BugsnagAPIKey</key>
   <string>YOUR-API-KEY-HERE</string>
+	<key>UIUserInterfaceStyle</key>
+  <string>Light</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
