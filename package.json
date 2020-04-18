@@ -31,7 +31,8 @@
   "dependencies": {
     "bugsnag-react-native": "^2.23.7",
     "react": "16.12.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-libs": "git+https://4579b398f7615b2b10c27229441afc34a4bd42a8:x-oauth-basic@github.com/pridemon/react-native-libs#2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -52,6 +53,7 @@
     "lint-staged": "^9.4.3",
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.4",
+    "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
   },
