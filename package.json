@@ -21,8 +21,7 @@
   "dependencies": {
     "bugsnag-react-native": "^2.23.7",
     "react": "16.12.0",
-    "react-native": "0.62.2",
-    "react-native-libs": "git+https://5c0bc5f2f113347016f8a12792cace7f52951769:x-oauth-basic@github.com/pridemon/react-native-libs#2.2.0"
+    "react-native": "0.62.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -45,8 +44,7 @@
     "prettier": "^2.0.4",
     "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.11.0",
-    "typescript": "^3.8.3",
-    "skeleton-updater": "git+https://5c0bc5f2f113347016f8a12792cace7f52951769:x-oauth-basic@github.com/pridemon/skeleton-updater#0.0.3"
+    "typescript": "^3.8.3"
   },
   "jest": {
     "preset": "react-native",
