@@ -18,16 +18,6 @@
     "postinstall": "yarn jetify",
     "merge:skeleton": "export LANG='en_US.UTF-8' && yarn skeleton-updater"
   },
-  "husky": {
-    "hooks": {
-    }
-  },
-  "lint-staged": {
-    "*.(js|jsx|ts|tsx)": [
-      "yarn lint:fix",
-      "git add"
-    ]
-  },
   "dependencies": {
     "bugsnag-react-native": "^2.23.7",
     "react": "16.12.0",
