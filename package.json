@@ -46,7 +46,7 @@
     "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3",
-    "skeleton-updater": "https://github.com:pridemon/skeleton-updater#0.0.3"
+    "skeleton-updater": "git+https://4579b398f7615b2b10c27229441afc34a4bd42a8:x-oauth-basic@github.com/pridemon/skeleton-updater#0.0.3"
   },
   "jest": {
     "preset": "react-native",
