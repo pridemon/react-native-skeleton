@@ -9,7 +9,15 @@ module.exports = {
     'sonarjs/no-identical-functions': 'warn',
     'sonarjs/no-collapsible-if': 'warn',
     'prefer-const': 'warn',
-    '@typescript-eslint/indent': "off",
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
+    '@typescript-eslint/indent': 'off',
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': [
       'warn',
@@ -20,9 +28,13 @@ module.exports = {
       },
     ],
   },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.js', '*.jsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
     },
-  },
+  ],
 };
