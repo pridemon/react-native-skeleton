@@ -11,7 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.bugsnag.BugsnagReactNative;
+import com.bugsnag.android.Bugsnag;
 import com.google.android.play.core.missingsplits.MissingSplitsManagerFactory;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -49,7 +49,7 @@ public class MainApplication extends Application implements ReactApplication {
       return;
     }
     super.onCreate();
-    BugsnagReactNative.start(this);
+    Bugsnag.start(this);
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
