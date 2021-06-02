@@ -16,7 +16,8 @@
     "clean:android": "cd android && ./gradlew clean && ./gradlew cleanBuildCache",
     "clean:ios": "rm -rf ios/Pods/ && rm -rf ~/Library/Caches/CocoaPods/ && rm -rf ~/Library/Developer/Xcode/DerivedData/ && cd ios && pod cache clean --all && pod install",
     "postinstall": "yarn jetify",
-    "merge:skeleton": "export LANG='en_US.UTF-8' && yarn skeleton-updater"
+    "merge:skeleton": "export LANG='en_US.UTF-8' && yarn skeleton-updater",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@bugsnag/react-native": "^7.10.1",
@@ -42,7 +43,6 @@
     "jetifier": "^2.0.0",
     "lint-staged": "^11.0.0",
     "metro-react-native-babel-preset": "^0.64.0",
-    "prettier": "^2.3.0",
     "react-native-rename": "^2.9.0",
     "react-test-renderer": "17.0.1",
     "ts-node": "^10.0.0",
@@ -60,6 +60,12 @@
       "jsx",
       "json",
       "node"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:fix",
+      "git add"
     ]
   }
 }
