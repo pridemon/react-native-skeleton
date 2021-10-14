@@ -30,7 +30,7 @@
     "@bugsnag/source-maps": "^2.1.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
-    "@types/react-native": "^0.64.5",
+    "@types/react-native": "^0.65.1",
     "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
@@ -65,8 +65,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint:fix",
-      "git add"
+      "yarn lint:fix"
     ]
   }
 }
